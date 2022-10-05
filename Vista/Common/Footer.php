@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="Assets/css.css">
-<footer class="page-footer font-small" style="background-color: rgb(175, 124, 223);>
+<footer class="page-footer font-small">
 
     <!-- Copyright -->
     <div class="container">

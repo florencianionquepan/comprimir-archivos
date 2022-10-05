@@ -2,5 +2,9 @@ footer{
     position: fixed;
     left: 0px;
     bottom:0px;
-    width: 100%;
+    width: 100%;    
+}
+
+footer , .navbar{
+    background-color: rgb(175, 124, 223);
 }

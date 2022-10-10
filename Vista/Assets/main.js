@@ -11,8 +11,18 @@ btnSubir.onclick=function(){
             method: 'POST',
             body:formData,
         })
-        .then(resp=>console.log(resp));
+        .then(resp=>successMessage(resp))
     }else{
         Swal.fire('Debes adjuntar un archivo al menos!');
     }
+}
+
+function successMessage(resp){
+    console.log(resp);
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Tus archivos fueron subidos',
+        showConfirmButton: false,
+      })
 }

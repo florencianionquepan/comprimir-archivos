@@ -1,7 +1,7 @@
 <?php
 class C_archivoComprimido{
-    function moverArchivo($archivos){
-        $archivos=$archivos["archivos"];
+    function moverArchivo($FILES){
+        $archivos=$FILES["archivos"];
         $uploadFiles=[];
         $file_name=[];
         foreach ($archivos as $key => $value) {

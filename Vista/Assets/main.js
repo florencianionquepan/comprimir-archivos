@@ -1,7 +1,7 @@
-const btnSubir=document.querySelector('#envio');
 const inputFile=document.querySelector('input');
+const btnComprimir=document.querySelector('button');
 
-btnSubir.onclick=function(){
+inputFile.onchange=function(){
     if(inputFile.files.length>0){
         let formData=new FormData();
         for(let i=0;i<inputFile.files.length;i++){
@@ -12,8 +12,6 @@ btnSubir.onclick=function(){
             body:formData,
         })
         .then(resp=>successMessage(resp))
-    }else{
-        Swal.fire('Debes adjuntar un archivo al menos!');
     }
 }
 
@@ -25,4 +23,12 @@ function successMessage(resp){
         title: 'Tus archivos fueron subidos',
         showConfirmButton: false,
       })
+}
+
+btnComprimir.onclick=function(){
+    if(inputFile.files.length>0){
+
+    }else{
+        Swal.fire('No existen archivos a comprimir')
+    }
 }

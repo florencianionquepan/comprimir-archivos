@@ -3,7 +3,7 @@ include_once('../Vista/Common/Header.php');
 include_once("./../Control/C_archivoComprimido.php");
 
 $objetoZip=new C_archivoComprimido;
-$file=$objetoZip->moverArchivo($_FILES);
+//$file=$objetoZip->moverArchivo($_FILES);
 $resultados=$objetoZip->generarComprimido($file);
 
 ?>

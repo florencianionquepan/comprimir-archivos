@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="Assets/css.css">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script type='text/javascript' src='../node_modules/bootstrap/dist/js/bootstrap.min.js'></script>
+    <script src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
 </head>
 
 <body>

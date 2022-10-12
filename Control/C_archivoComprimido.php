@@ -24,12 +24,12 @@ class C_archivoComprimido{
 
     function generarComprimido($file){
         $zip = new ZipArchive();
-        $zip_name = "./../Comprimidos.zip";
+        $zip_name = "Comprimidos.zip";
         if ($zip->open($zip_name, ZipArchive::CREATE) === true) {
-            for($i=0;$i<count($file);$i++){
+            for($i=2;$i<count($file);$i++){
                 $zip->addFile("./../Comprimidos/" . $file[$i]);
             }
-            $zip->close();
+            //$zip->close();
             // Declaramos una variable para mostrar mensaje 
             $resultado = true;
           } else {

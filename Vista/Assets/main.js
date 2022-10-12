@@ -1,5 +1,4 @@
 const inputFile=document.querySelector('input');
-const btnComprimir=document.querySelector('button');
 
 inputFile.onchange=function(){
     if(inputFile.files.length>0){
@@ -11,7 +10,7 @@ inputFile.onchange=function(){
             method: 'POST',
             body:formData,
         })
-        .then(resp=>successMessage(resp))
+        .then(resp=>successMessage(resp.json()))
     }
 }
 
@@ -23,12 +22,4 @@ function successMessage(resp){
         title: 'Tus archivos fueron subidos',
         showConfirmButton: false,
       })
-}
-
-btnComprimir.onclick=function(){
-    if(inputFile.files.length>0){
-
-    }else{
-        Swal.fire('No existen archivos a comprimir')
-    }
 }

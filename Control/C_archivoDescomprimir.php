@@ -23,10 +23,30 @@ class C_archivoDescomprimido{
         return $resultado;
     }
 
-    function eliminar(){
-        $estructura='./../Descomprimidos';
-        $eliminada=rmdir($estructura, 0700);
-        return $eliminada;
+    function obtenerArchivos($ruta, $lista){
+        //Chequear que exista la carpeta Descomprimidos:
+        if (is_dir($ruta)){
+            //Abre un gestor de directorios para la ruta indicada
+            $gestor = opendir($ruta);
+            //Recorre todos los archivos del directorio
+            while (($archivo = readdir($gestor)) !== false){
+                $ruta_completa = $ruta . "/" . $archivo;
+                //Se muestran todos los archivos y carpetas excepto "." y ".."
+                if ($archivo != "." && $archivo != ".."){
+                    //Si es un directorio se recorre recursivamente
+                    if (is_dir($ruta_completa)){
+                        $lista=$this->obtenerArchivos($ruta_completa,$lista);
+                    }else{
+                        $rutaArchivo=$ruta."/".$archivo;
+                        array_push($lista,$rutaArchivo);
+                        //print_r($lista);
+                    }
+                }
+            }
+            //Cierra el gestor de directorios
+            closedir($gestor);
+        }
+        return $lista;
     }
 }
 

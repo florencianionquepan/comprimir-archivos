@@ -5,7 +5,7 @@ include_once("./../Control/C_archivoComprimido.php");
 $objetoZip=new C_archivoComprimido;
 //$file=$objetoZip->moverArchivo($_FILES);
 $files=[];
-$folder='./../Comprimidos';
+$folder='./../Comprimidos2';
 if($handler=opendir($folder)){
     while(false !== ($file=readdir($handler))){
         array_push($files,$file);
@@ -15,6 +15,7 @@ if($handler=opendir($folder)){
 //print_r($files);
 $resultados=$objetoZip->generarComprimido($files);
 
+$limpiar=$objetoZip->limpiarDirectorio($files);
 ?>
  <div class="container-md">
     <div class="row m-5 text-center justify-content-center align-items-center">
@@ -32,4 +33,7 @@ $resultados=$objetoZip->generarComprimido($files);
         ?>
     </div>
 </div> 
-<?php include_once('../Vista/Common/Footer.php')?>
+<?php 
+
+
+include_once('../Vista/Common/Footer.php')?>

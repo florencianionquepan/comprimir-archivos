@@ -1,4 +1,10 @@
-<?php include_once('../Vista/Common/Header.php');unlink('../Vista/Comprimidos.zip');?>
+<?php 
+    include_once('../Vista/Common/Header.php');
+    
+    if(file_exists('../Vista/Comprimidos.zip')){
+        unlink('../Vista/Comprimidos.zip');
+    }
+?>
     
     <div class="container-md align-items: center">
         <div class="row pt-5 pb-5 ">

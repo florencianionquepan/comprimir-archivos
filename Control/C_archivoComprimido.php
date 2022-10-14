@@ -17,7 +17,7 @@ class C_archivoComprimido{
                 }
             }
         }
-        $folder = "./../Comprimidos/";
+        $folder = "./../Comprimidos2/";
         for($i=0;$i<count($uploadFiles);$i++){
             move_uploaded_file($uploadFiles[$i], "$folder" . $file_name[$i]);
         }
@@ -29,7 +29,7 @@ class C_archivoComprimido{
         $zip_name = "Comprimidos.zip";
         if ($zip->open($zip_name, ZipArchive::CREATE) === true) {
             for($i=2;$i<count($file);$i++){
-                $zip->addFile("./../Comprimidos/" . $file[$i]);
+                $zip->addFile("./../Comprimidos2/" . $file[$i]);
             }
             //$zip->close();
             // Declaramos una variable para mostrar mensaje 
@@ -40,6 +40,17 @@ class C_archivoComprimido{
           $resultados=[$resultado,$zip_name];
           return $resultados;
     }
+    
+    function limpiarDirectorio($file){
+        for($i=2;$i<count($file);$i++){    
+        If (unlink("./../Comprimidos2/" . $file[$i])) {
+            // file was successfully deleted
+          } else {
+            // there was a problem deleting the file
+          }
+        }   
+    }
+
     
 }
 

@@ -1,11 +1,16 @@
 <?php
+include_once('./../Util/funciones.php');
+
 class C_archivoDescomprimido{
     function generarCarpeta(){
         $estructura='./../Descomprimidos';
+        if (is_dir($estructura)){
+            rmDirR($estructura);
+        }
         $generada=mkdir($estructura, 0700);
         return $generada;
     }
-    //verificar tambien que el archivo sea de tipo zip!!!
+    //verificar tambien que el archivo sea de tipo zip!!! y no se envie vacio!!
 
     function descomprimir($zipUser){
         $locacion=$zipUser["zip"]["tmp_name"];

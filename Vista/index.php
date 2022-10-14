@@ -1,6 +1,5 @@
-<?php include_once('../Vista/Common/Header.php')?>
+<?php include_once('../Vista/Common/Header.php');unlink('../Vista/Comprimidos.zip');?>
     
-
     <div class="container-md align-items: center">
         <div class="row pt-5 pb-5 ">
             <div class="col row pt-5 pb-5 mx-5 justify-content-center">

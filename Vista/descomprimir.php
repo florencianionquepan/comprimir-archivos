@@ -7,5 +7,4 @@
             </form>
         </div>
     </div>
-    <script type='text/javascript' src='./Assets/descomprimir.js'></script>
 <?php include_once('../Vista/Common/Footer.php')?>

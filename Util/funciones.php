@@ -1,7 +1,6 @@
 <?php
 
-function data_submitted()
-{
+function data_submitted(){
     $_AAux = array();
     if (!empty($_POST))
         $_AAux = $_POST;
@@ -34,7 +33,18 @@ spl_autoload_register(function ($class_name){
             return;
         }
     }
-})
+});
+
+function rmDirR($carpeta){
+    foreach(glob($carpeta . "/*") as $archivos_carpeta){             
+        if (is_dir($archivos_carpeta)){
+            rmDirR($archivos_carpeta);
+        } else {
+        unlink($archivos_carpeta);
+        }
+      }
+      rmdir($carpeta);
+}
 
 
 ?>

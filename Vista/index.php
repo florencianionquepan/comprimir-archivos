@@ -8,5 +8,4 @@
         </div>
     </div>
     <script type='text/javascript' src='./Assets/main.js'></script>
-    <script type='text/javascript' src='./Assets/main2.js'></script>
 <?php include_once('../Vista/Common/Footer.php')?>

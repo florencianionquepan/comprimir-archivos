@@ -1,6 +1,8 @@
 <?php
 class C_archivoComprimido{
+    
     function moverArchivo($FILES){
+
         $archivos=$FILES["archivos"];
         $uploadFiles=[];
         $file_name=[];
@@ -40,3 +42,6 @@ class C_archivoComprimido{
     }
     
 }
+
+?>
+

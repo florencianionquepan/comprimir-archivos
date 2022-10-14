@@ -8,3 +8,5 @@ footer{
 footer , .navbar{
     background-color: rgb(175, 124, 223);
 }
+
+.col { border-style: solid; border-width: 1px; border-color: rgb(175, 124, 223)}

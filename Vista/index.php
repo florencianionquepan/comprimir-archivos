@@ -27,5 +27,6 @@
     <script type='text/javascript' src='./Assets/js.js'></script>
    
 <?php
+
 include_once('../Vista/Common/Footer.php');
 ?>

@@ -1,4 +1,5 @@
 <?php
+
 class C_archivoComprimido{
     
     function moverArchivo($FILES){
@@ -15,8 +16,15 @@ class C_archivoComprimido{
                 foreach($value as $k=>$v){
                 array_push($file_name,$v);
                 }
+            }else if($key == "size"){
+                foreach($value as $k=>$v){
+                    if($v >= 2099000){
+                        //mensaje = No se han podido subir los archivos;
+                    }
+                    }
             }
         }
+
         $folder = "./../Comprimidos2/";
         for($i=0;$i<count($uploadFiles);$i++){
             move_uploaded_file($uploadFiles[$i], "$folder" . $file_name[$i]);

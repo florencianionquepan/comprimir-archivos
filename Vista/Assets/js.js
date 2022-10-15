@@ -14,7 +14,6 @@ const inputFile=document.querySelector('input');
     .then(resp=>successMessage(resp.json()))
     }}
 
-
     function successMessage(resp){
     console.log(resp);
     Swal.fire({

@@ -2,12 +2,13 @@ const inputFile=document.querySelector('input');
 
 inputFile.onchange=function(){
     subir();
+    
     if(inputFile.files.length>0){
         let formData=new FormData();
         for(let i=0;i<inputFile.files.length;i++){
             formData.append("archivos[]",inputFile.files[i]);
         }
-        fetch("guardar.php",{
+        fetch("../guardar.php",{
             method: 'POST',
             body:formData,
             })

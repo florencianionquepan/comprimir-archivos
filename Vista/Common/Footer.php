@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="Assets/css.css">
+<link rel="stylesheet" href="../Assets/css.css">
 <footer class="page-footer font-small">
 
     <!-- Copyright -->

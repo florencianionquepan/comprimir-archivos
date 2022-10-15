@@ -3,6 +3,7 @@ const inputFile=document.querySelector('input');
 inputFile.onchange=function(){
     
     if(inputFile.files.length>0 && verificarArchivos()){
+
         subir();
         let formData=new FormData();
         for(let i=0;i<inputFile.files.length;i++){
@@ -48,7 +49,7 @@ function errorMessage(){
     Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: 'Alguno archivo pesa mucho',
+        text: 'Alguno de los archivos pesa mucho',
         confirmButtonColor: 'rgb(156, 51, 253)',
       })
 }
@@ -59,6 +60,6 @@ function subir(){
         var table = document.getElementById("nombresArchivos");
         var cantFilas = table.getElementsByTagName("tr").length;
         var row = table.insertRow(cantFilas);
-        row.innerHTML += '<td>'+archivos[i].name+'</td>'; 
+        row.innerHTML += '<td>'+archivos[i].name+'</td>'+'<td>'+'<input class="quitar btn btn-default border" type="button" value="x" >'+'</td>'; 
     }
 }

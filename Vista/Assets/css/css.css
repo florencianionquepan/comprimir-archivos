@@ -9,5 +9,19 @@ footer , .navbar{
     background-color: rgb(175, 124, 223);
 }
 
-.col { border-style: solid; border-width: 1px; border-color: rgb(175, 124, 223)}
+.col { border-style: solid; 
+       border-width: 4px; 
+       border-color: rgb(175, 124, 223); 
+       border-radius:20px;
+      }
+
+    .quitar{
+        position: relative;
+        top:-0.5em;
+        left: -1em;
+        margin-top:6px;
+        padding: 0px;
+    }
+
+    
 

@@ -8,7 +8,7 @@ inputFile.onchange=function(){
         for(let i=0;i<inputFile.files.length;i++){
             formData.append("archivos[]",inputFile.files[i]);
         }
-        fetch("../guardar.php",{
+        fetch("../../Util/guardar.php",{
             method: 'POST',
             body:formData,
             })

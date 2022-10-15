@@ -1,8 +1,8 @@
 <?php 
     include_once('../../Vista/Common/Header.php');
     
-    if(file_exists('../../Vista/Comprimidos.zip')){
-        unlink('../../Vista/Comprimidos.zip');
+    if(file_exists('../../Vista/ZipArchive/Comprimidos.zip')){
+        unlink('../../Vista/ZipArchive/Comprimidos.zip');
     }
 ?>
     

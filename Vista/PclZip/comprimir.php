@@ -1,8 +1,8 @@
 <?php 
-    include_once('../Vista/Common/Header.php');
+    include_once('../../Vista/Common/Header.php');
     
-    if(file_exists('../Vista/Comprimidos.zip')){
-        unlink('../Vista/Comprimidos.zip');
+    if(file_exists('../../Vista/ZipArchive/Comprimidos.zip')){
+        unlink('../../Vista/ZipArchive/Comprimidos.zip');
     }
 ?>
     
@@ -24,8 +24,8 @@
         </div>
     </div>
 
-    <script type='text/javascript' src='./Assets/js.js'></script>
+    <script type='text/javascript' src='../Assets/js/javas.js'></script>
    
 <?php
-include_once('../Vista/Common/Footer.php');
+include_once('../../Vista/Common/Footer.php');
 ?>

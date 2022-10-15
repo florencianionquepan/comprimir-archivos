@@ -1,9 +1,9 @@
 const inputFile=document.querySelector('input');
 
 inputFile.onchange=function(){
-    subir();
     
-    if(inputFile.files.length>0){
+    if(inputFile.files.length>0 && verificarArchivos()){
+        subir();
         let formData=new FormData();
         for(let i=0;i<inputFile.files.length;i++){
             formData.append("archivos[]",inputFile.files[i]);
@@ -16,15 +16,41 @@ inputFile.onchange=function(){
     }
 }
 
+function verificarArchivos(){
+    var archivos = inputFile.files;
+    var bandera = true;
+    var i = 0;
+    while(bandera && i<archivos.length){
+        const fsize = archivos.item(i).size;
+        if(fsize > 2099000){
+            bandera = false;
+            errorMessage();
+            inputFile.value = '';
+            
+        }
+        i++;
+    }
+    return bandera;
+}
 
 function successMessage(resp){
     console.log(resp);
     Swal.fire({
         position: 'center',
         icon: 'success',
-        title: 'Tus archivos fueron subidos',
-        showConfirmButton: false,
+        title: 'Nice:)',
+        text: 'Tus archivos fueron subidos correctamente',
+        confirmButtonColor: 'rgb(156, 51, 253)',
         })
+}
+
+function errorMessage(){
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Alguno archivo pesa mucho',
+        confirmButtonColor: 'rgb(156, 51, 253)',
+      })
 }
 
 function subir(){

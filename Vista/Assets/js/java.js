@@ -1,6 +1,7 @@
 const inputFile=document.querySelector('input');
 
 inputFile.onchange=function(){
+
     
     if(inputFile.files.length>0 && verificarArchivos()){
 
@@ -49,7 +50,7 @@ function errorMessage(){
     Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: 'Alguno de los archivos pesa mucho',
+        text: 'Alguno de los archivos tiene mucho peso',
         confirmButtonColor: 'rgb(156, 51, 253)',
       })
 }
@@ -60,6 +61,19 @@ function subir(){
         var table = document.getElementById("nombresArchivos");
         var cantFilas = table.getElementsByTagName("tr").length;
         var row = table.insertRow(cantFilas);
-        row.innerHTML += '<td>'+archivos[i].name+'</td>'+'<td>'+'<input class="quitar btn btn-default border" type="button" value="x" >'+'</td>'; 
+        row.innerHTML += '<td id='+'"'+(parseInt(cantFilas)-1)+'"'+'>'+archivos[i].name+'</td>'+'<td>'+'<input class="remove btn btn-default border" onclick="borrarArchivo('+(cantFilas-1)+')" type="button" value="x" >'+'</td>';
+    
     }
 }
+
+$(document).on('click', '.remove', function(event) {
+    event.preventDefault();
+
+    var fila = $(this).closest('tr');
+    console.log(fila);
+
+    var nombreArchivo = fila[0].firstChild.innerHTML;
+
+    fila.remove();
+
+  });

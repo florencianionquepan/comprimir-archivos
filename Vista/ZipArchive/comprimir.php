@@ -25,7 +25,7 @@
         </div>
     </div>
 
-    <script type='text/javascript' src='../Assets/js/javas.js'></script>
+    <script type='text/javascript' src='../Assets/js/java.js'></script>
     <script type='text/javascript' src='../Assets/js/js.js'></script>
    
 <?php

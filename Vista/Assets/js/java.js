@@ -1,3 +1,4 @@
+
 const inputFile=document.querySelector('input');
 
 inputFile.onchange=function(){
@@ -61,7 +62,7 @@ function subir(){
         var table = document.getElementById("nombresArchivos");
         var cantFilas = table.getElementsByTagName("tr").length;
         var row = table.insertRow(cantFilas);
-        row.innerHTML += '<td id='+'"'+(parseInt(cantFilas)-1)+'"'+'>'+archivos[i].name+'</td>'+'<td>'+'<input class="remove btn btn-default border" onclick="borrarArchivo('+(cantFilas-1)+')" type="button" value="x" >'+'</td>';
+        row.innerHTML += '<td>'+archivos[i].name+'</td>'+'<td>'+'<input class="remove btn btn-default border" type="button" value="x" >'+'</td>';
     
     }
 }
@@ -74,6 +75,7 @@ $(document).on('click', '.remove', function(event) {
 
     var nombreArchivo = fila[0].firstChild.innerHTML;
 
-    fila.remove();
+    $.post("../../Util/eliminar.php",{"texto":nombreArchivo});
 
-  });
+    fila.remove();
+});

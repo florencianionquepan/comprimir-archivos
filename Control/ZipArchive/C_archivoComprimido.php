@@ -51,6 +51,18 @@ class C_archivoComprimido{
         }   
     }
 
+    function eliminarArchivo($nombre){
+
+        
+            If (unlink("../Uploads/" . $nombre)) {
+            // file was successfully deleted
+          } else {
+            // there was a problem deleting the file
+          }
+     
+    }
+
+
     
 }
 

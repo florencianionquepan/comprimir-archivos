@@ -1,9 +1,9 @@
 <?php
-include_once('./../Util/funciones.php');
+include_once('../../Util/funciones.php');
 
 class C_archivoDescomprimido{
     function generarCarpeta(){
-        $estructura='./../Descomprimidos';
+        $estructura='../../Descomprimidos';
         if (is_dir($estructura)){
             rmDirR($estructura);
         }
@@ -19,7 +19,7 @@ class C_archivoDescomprimido{
         $resultado=false;
         //quiero que el archivo a descomprimir sea de solo lectura
         if($zip->open($locacion, ZipArchive::RDONLY)===TRUE) {
-            $zip->extractTo('./../Descomprimidos');
+            $zip->extractTo('../../Descomprimidos');
             $zip->close();
             $resultado=true;
         }else{

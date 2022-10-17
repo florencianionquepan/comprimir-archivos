@@ -3,9 +3,9 @@ include_once('../../Vista/Common/Header.php');
 include_once("../../Control/ZipArchive/C_archivoComprimido.php");
 
 $objetoZip=new C_archivoComprimido;
-$folder='./../../Uploads';
+$folder='./../../Uploads/';
 $files=$objetoZip->obtenerArchivos($folder, $lista=[]);
-$resultados=$objetoZip->generarComprimido($files);
+$resultados=$objetoZip->generarComprimido($files,$folder);
 
 ?>
  <div class="container-md">

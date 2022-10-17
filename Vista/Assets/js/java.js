@@ -2,7 +2,6 @@
 const inputFile=document.querySelector('input');
 
 inputFile.onchange=function(){
-
     
     if(inputFile.files.length>0 && verificarArchivos()){
 
@@ -69,6 +68,9 @@ function subir(){
     var nada = document.getElementById('nada');
     if (cantFilas>0){
         nada.style.display = 'none';
+
+        var button = document.getElementById('comprimir');
+        button.disabled = false;
     }
 }
 
@@ -90,6 +92,8 @@ $(document).on('click', '.remove', function(event) {
 
     if (cantFilas==1){
         nada.style.display = 'block';
+
+        var button = document.getElementById('comprimir');
+        button.disabled = true;
     }
 });
-

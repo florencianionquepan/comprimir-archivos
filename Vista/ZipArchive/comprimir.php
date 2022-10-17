@@ -1,7 +1,7 @@
 <?php 
     include_once('../../Vista/Common/Header.php');
     include_once("../../Control/ZipArchive/C_archivoComprimido.php");
-    
+/*     
     if(file_exists('../../Vista/ZipArchive/Comprimidos.zip')){
         unlink('../../Vista/ZipArchive/Comprimidos.zip');
     }
@@ -18,21 +18,21 @@
 
             $zip=new C_archivoComprimido;
             $zip->limpiarDirectorio($files);
-        }    
+        }     */
 ?>
     
-    <div class="container-md align-items: center mb-5">
-        <div class="row pt-5 pb-5 ">
-            <div class="col row pt-5 pb-5 mx-5 justify-content-center">
-                <form method="post" action="accionZip.php" enctype="multipart/form-data" class="col-8 row align-items-center" id = "form">
+    <div class="container-md align-items-center mb-5">
+        <div class="row py-5 justify-content-center">
+            <div class="col-10 col-md-8 col-lg-5 py-5 my-3 cuadro justify-content-center text-center">
+                <form method="post" action="accionZip.php" enctype="multipart/form-data" class="align-items-center" id = "form">
                     <input type="file" name="archivos[]" id='archivos' class="form-control" id="archivos[]" multiple></input>
                    <button class="btn btn-outline-secondary my-3" disabled="disabled" type="submit" id="comprimir">COMPRIMIR ARCHIVO/S</button>
                 </form>
             </div>
     
-            <div class="col row pt-5 pb-5 mx-5 justify-content-center">
+            <div class="col-10 col-md-8 col-lg-5 py-5 mx-5 my-3 cuadro">
 
-            <p id='nada' class="text-center text-muted fw-bold">Aún no hay archivos para comprimir</p>
+            <p id='nada' class="text-center text-muted fw-bold">Aún no existen archivos para comprimir</p>
                 <table class="table" id='nombresArchivos'>
                     <tr></tr>
                 </table>

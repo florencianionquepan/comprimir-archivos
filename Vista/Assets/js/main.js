@@ -10,13 +10,13 @@ inputFile.onchange=function(){
         for(let i=0;i<inputFile.files.length;i++){
             formData.append("archivos[]",inputFile.files[i]);
         }
-        fetch("../../Util/guardar.php",{
+        fetch("guardar.php",{
             method: 'POST',
             body:formData,
             })
             .then(resp=>successMessage(resp.json()))
     }
-    inputFile.value = '';
+    inputFile.value='';
 }
 
 function verificarArchivos(){
@@ -41,7 +41,7 @@ function successMessage(resp){
     Swal.fire({
         position: 'center',
         icon: 'success',
-        title: 'Nice:)',
+        title: 'Genial:)',
         text: 'Tus archivos fueron subidos correctamente',
         confirmButtonColor: 'rgb(156, 51, 253)',
         })

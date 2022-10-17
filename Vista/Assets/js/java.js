@@ -17,6 +17,7 @@ inputFile.onchange=function(){
             })
             .then(resp=>successMessage(resp.json()))
     }
+    inputFile.value = '';
 }
 
 function verificarArchivos(){
@@ -28,7 +29,7 @@ function verificarArchivos(){
         if(fsize > 2099000){
             bandera = false;
             errorMessage();
-            inputFile.value = '';
+            
             
         }
         i++;
@@ -63,7 +64,11 @@ function subir(){
         var cantFilas = table.getElementsByTagName("tr").length;
         var row = table.insertRow(cantFilas);
         row.innerHTML += '<td>'+archivos[i].name+'</td>'+'<td>'+'<input class="remove btn btn-default border" type="button" value="x" >'+'</td>';
-    
+    }
+
+    var nada = document.getElementById('nada');
+    if (cantFilas>0){
+        nada.style.display = 'none';
     }
 }
 
@@ -78,4 +83,13 @@ $(document).on('click', '.remove', function(event) {
     $.post("../../Util/eliminar.php",{"texto":nombreArchivo});
 
     fila.remove();
+
+    var table = document.getElementById("nombresArchivos");
+    var cantFilas = table.getElementsByTagName("tr").length;
+    var nada = document.getElementById('nada');
+
+    if (cantFilas==1){
+        nada.style.display = 'block';
+    }
 });
+

@@ -23,6 +23,9 @@ $limpiar=$objetoZip->limpiarDirectorio($files);
             <div class="col-12 col-md-8 col-lg-6 col-xl-4 alert alert-secondary" role="alert">
             Ahora puedes descargar  <a class="alert-link" href='<?php echo $resultados[1]?>'>tu fichero ZIP ♥</a>
             </div>
+
+            <a href= "comprimir.php" class="btn btn-outline-secondary my-5">Volver</a>
+            
         <?php
         }else{ ?>
             <div class="col-12 col-md-8 col-lg-6 col-xl-4 alert alert-danger" role="alert">
@@ -34,6 +37,5 @@ $limpiar=$objetoZip->limpiarDirectorio($files);
     </div>
 </div> 
 <?php 
-
 
 include_once('../../Vista/Common/Footer.php')?>

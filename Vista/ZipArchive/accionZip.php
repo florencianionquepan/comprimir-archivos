@@ -3,19 +3,10 @@ include_once('../../Vista/Common/Header.php');
 include_once("../../Control/ZipArchive/C_archivoComprimido.php");
 
 $objetoZip=new C_archivoComprimido;
-//$file=$objetoZip->moverArchivo($_FILES);
-$files=[];
-$folder='../../Uploads';
-if($handler=opendir($folder)){
-    while(false !== ($file=readdir($handler))){
-        array_push($files,$file);
-    }
-    closedir($handler);
-}
-//print_r($files);
+$folder='./../../Uploads';
+$files=$objetoZip->obtenerArchivos($folder, $lista=[]);
 $resultados=$objetoZip->generarComprimido($files);
 
-$limpiar=$objetoZip->limpiarDirectorio($files);
 ?>
  <div class="container-md">
     <div class="row m-5 text-center justify-content-center align-items-center">

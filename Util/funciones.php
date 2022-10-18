@@ -17,7 +17,7 @@ function data_submitted(){
     return $_AAux;
 }
 
-spl_autoload_register(function ($class_name){
+/* spl_autoload_register(function ($class_name){
     //echo "class ".$class_name ;
     $directorys = array(
         $_SESSION['ROOT'].'Modelo/',
@@ -33,7 +33,7 @@ spl_autoload_register(function ($class_name){
             return;
         }
     }
-});
+}); */
 
 function rmDirR($carpeta){
     foreach(glob($carpeta . "/*") as $archivos_carpeta){             

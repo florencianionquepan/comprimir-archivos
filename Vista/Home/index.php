@@ -3,9 +3,9 @@
 ?>
 
 <link rel="stylesheet" href="../Assets/css/estilo.css">
-<div id="indexElement">
-  
-  <img id="imgIndex" src="../Assets/img/original.jpg" alt="gato"/>
+
+<div id="indexElement">  
+  <img class="img-fluid mt-5" id="imgIndex" src="../Assets/img/zip.png" alt="zip"/>
 </div>
 
 <?php

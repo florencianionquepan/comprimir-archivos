@@ -14,8 +14,11 @@ $zipFile=$objetoZip->generarComprimido($files,$folder);
             Ahora puedes descargar  <a class="alert-link" href='<?php echo $zipFile?>'>tu fichero ZIP ♥</a>
             </div>
     </div>
+    <div class="text-center">
+                <a href= "comprimirPcl.php" class="btn btn-outline-secondary">Volver</a>
+        </div>
 </div> 
 <?php 
 
 
-include_once('../Vista/Common/Footer.php')?>
+include_once('../../Vista/Common/Footer.php')?>

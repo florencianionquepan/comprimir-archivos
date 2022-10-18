@@ -12,7 +12,7 @@
     <div class="container-md align-items-center mb-5">
         <div class="row py-5 justify-content-center">
             <div class="col-10 col-md-8 col-lg-5 py-5 my-3 cuadro justify-content-center text-center">
-                <form method="post" action="accionZip.php" enctype="multipart/form-data" class="align-items-center" id = "form">
+                <form method="post" action="accionZipPcl.php" enctype="multipart/form-data" class="align-items-center" id = "form">
                     <input type="file" name="archivos[]" class="form-control" id="archivos[]" multiple></input>
                    <button class="btn btn-outline-secondary my-3" disabled="disabled" type="submit" id="comprimir">COMPRIMIR ARCHIVO/S</button>
                 </form>
@@ -28,7 +28,7 @@
         </div>
     </div>
 
-    <script type='text/javascript' src='../Assets/js/main.js'></script>
+    <script type='text/javascript' src='../Assets/js/mainPclZip.js'></script>
    
 <?php
 include_once('../../Vista/Common/Footer.php');

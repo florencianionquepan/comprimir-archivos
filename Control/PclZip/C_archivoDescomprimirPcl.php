@@ -8,17 +8,18 @@ class C_archivoDescomprimidoPcl{
         if (is_dir($estructura)){
             rmDirR($estructura);
         }
-/*         $generada=mkdir($estructura, 0700);
-        return $generada; */
+        $generada=mkdir($estructura, 0700);
+        return $generada;   
     }
     //verificar tambien que el archivo sea de tipo zip!!! y no se envie vacio!!
 
     function descomprimir($zipUser){
         $locacion=$zipUser["zip"]["tmp_name"];
         $archivo=$zipUser["zip"]["name"];
-        $zip = new PclZip($archivo);
+        move_uploaded_file($locacion, "./../../Descomprimidos/" . $archivo);
+        $zip = new PclZip("./../../Descomprimidos/".$archivo);
         $resultado=false;
-        if($zip->extract('./../../Descomprimidos')) {
+        if($zip->extract('./../../Descomprimidos/zip/')) {
             $resultado=true;
         }else{
             $error=$zip->errorInfo();

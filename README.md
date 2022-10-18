@@ -6,5 +6,5 @@
 ## Objetivo 📌
 - Deberá investigar y probar el uso (con ejemplos) de alguna librería en PHP, que resuelva un problema específico.
 ## Instrucciones de instalación :octocat:
-- Correr npm install -g npm@latest en la terminal de nuestro editor de codigo o en el CMD de windows
+- Instalar node.js y NPM desde el sitio oficial https://nodejs.org/es/download/.
 - Para instalar los paquetes necesarios, correr npm install en la terminal situados en la carpeta del proyecto

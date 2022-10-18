@@ -1,5 +1,6 @@
 <?php
 include_once('./../../Util/funciones.php');
+include_once('./../../Util/pclzip.lib.php');
 
 class C_archivoComprimidoPcl{
     function generarCarpeta($estructura){
@@ -27,7 +28,6 @@ class C_archivoComprimidoPcl{
                     }else{
                         $rutaArchivo=$ruta."/".$archivo;
                         array_push($lista,$rutaArchivo);
-                        //print_r($lista);
                     }
                 }
             }
@@ -59,12 +59,11 @@ class C_archivoComprimidoPcl{
     }
 
     function generarComprimido($files,$folder){
-        //print_r($files);
         $zip_name = $folder."nuevoZip.zip";
         $zip = new PclZip($zip_name);
-        for($i=0;$i<count($files);$i++){
+        foreach($files as $file){
             if ($file!= "." && $file!= ".."){
-                $zip->create($file[$i]);
+                $zip->add($file);
             }
         }
         return $zip_name;

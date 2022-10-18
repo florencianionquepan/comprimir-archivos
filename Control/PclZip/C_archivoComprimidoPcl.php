@@ -1,5 +1,5 @@
 <?php
-include_once('./../../Util/funciones.php');
+include_once('./../../Util/pclZip.lib.php');
 
 class C_archivoComprimidoPcl{
     function generarCarpeta($estructura){

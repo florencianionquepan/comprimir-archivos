@@ -59,7 +59,7 @@ class C_archivoComprimido{
     }
 
     function generarComprimido($files,$folder){
-        print_r($files);
+        //print_r($files);
         $zip = new ZipArchive();
         $zip_name = $folder."nuevoZip.zip";
         if ($zip->open($zip_name, ZipArchive::CREATE) === true) {

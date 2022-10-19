@@ -10,7 +10,7 @@ $resultados=$objetoDescomprimir->descomprimir($_FILES);
         echo "<div class='col-12 col-md-8 col-lg-6 alert alert-secondary' role='alert'>";
         foreach($rutasArchivos as $archivo){
             $nombreArchivo=explode('/',$archivo);
-            echo "<a class='alert-link' download href=../../'.$archivo>".end($nombreArchivo)."</a><br>";
+            echo "<a class='alert-link' download href= '$archivo'>".end($nombreArchivo)."</a><br>";
         }
         echo "</div>";
         echo "</div>";

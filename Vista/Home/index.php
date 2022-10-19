@@ -13,25 +13,19 @@
     </div>
 </div>
 <div id="indexElement">  
-  <img class="img-fluid mb-3" id="imgIndex" src="../Assets/img/zip.png" alt="zip"/>
+  <img class="img-fluid" id="imgIndex" src="../Assets/img/zip.png" alt="zip"/>
 </div>
 
-  <div class="row align-items-center text-center justify-content-center">
+  <div class="row align-items-center justify-content-center">
     <div class="col-10 col-md-6 col-lg-5">
-      <h1>ZipArchive<h1>
+      <h1>ZipArchive</h1>
+      <p>Clase nativa de php.<br>
+      Es necesario tener habilitada la extensión ZIP en el servidor que ofrece el servicio de alojamiento.</p>
     </div>
     <div class="col-10 col-md-6 col-lg-5">
-      <h1>PclZip<h1>
-    </div>
-  </div>
-  <div class="row align-items-start justify-content-center">
-    <div class="col-10 col-md-6 col-lg-5">
-    Clase nativa de php.<br>
-    Es necesario tener habilitada la extensión ZIP en el servidor que ofrece el servicio de alojamiento.
-    </div>
-    <div class="col-10 col-md-6 col-lg-5">
-      Clase externa de php. <br>
-    En ocasiones no tenemos acceso a la instalación y modificación de paquetes y configuración del servidor, por lo que una buena opción es el uso de esta librería.
+      <h1>PclZip</h1>
+      <p>Clase externa de php. <br>
+      En ocasiones no tenemos acceso a la instalación y modificación de paquetes y configuración del servidor, por lo que una buena opción es el uso de esta librería.</p>
     </div>
   </div>
   <div class="row align-items-center justify-content-center">

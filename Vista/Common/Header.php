@@ -1,5 +1,6 @@
 <?php
-//include_once('../configuracion.php');
+include_once('./../../Util/funciones.php');
+include_once('./../../configuracion.php');
 ?>
 
 <!DOCTYPE html>

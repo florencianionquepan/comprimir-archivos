@@ -8,38 +8,47 @@
   <img class="img-fluid mt-5" id="imgIndex" src="../Assets/img/zip.png" alt="zip"/>
 </div>
 
-<div class="container text-center mb-5 mt-5">
+<div class="container-md mb-5 mt-5">
 
-  <div class="row align-items-start">
-    <div class="col mb-5">
-      <h2>Comprimir y descomprimir archivos Zip<h2>
+  <div class="row align-items-center justify-content-center">
+    <div class="col-10 text-center mb-3">
+      <h2 class='display'>Comprimir y descomprimir archivos Zip<h2>
     </div>
   </div>
-  <div class="row align-items-start">
-    <div class="col">
+  <div class="row align-items-center text-center justify-content-center">
+    <div class="col-10 col-md-6 col-lg-5">
       <h1>ZipArchive<h1>
     </div>
-    <div class="col">
+    <div class="col-10 col-md-6 col-lg-5">
       <h1>PclZip<h1>
     </div>
   </div>
-  <div class="row align-items-center">
-    <div class="col">
-    Una de las formas más sencillas de comprimir y descomprimir archivos es utilizar la clase ZipArchive que es nativa de php
-    pero esta tiene el inconveniente de que es necesario tener habilitada la extensión ZIP en el servidor que ofrece el servicio de alojamiento.
+  <div class="row align-items-start justify-content-center">
+    <div class="col-10 col-md-6 col-lg-5">
+    Clase nativa de php.<br>
+    Es necesario tener habilitada la extensión ZIP en el servidor que ofrece el servicio de alojamiento.
     </div>
-    <div class="col">
+    <div class="col-10 col-md-6 col-lg-5">
+      Clase externa de php. <br>
     En ocasiones no tenemos acceso a la instalación y modificación de paquetes y configuración del servidor, por lo que una buena opción es el uso de esta librería.
     </div>
   </div>
-  <div class="row align-items-end">
-    <div class="col">
+  <div class="row align-items-center justify-content-center">
+    <div class="col-10 col-md-6 col-lg-5">
       One of three columns
     </div>
-    <div class="col">
+    <div class="col-10 col-md-6 col-lg-5">
       One of three columns
     </div>
   </div>
+  <div class="row align-items-center justify-content-center">
+  <div class="col-10 text-center my-3">
+  <h3>Otras dependencias utilizadas</h3>
+    <p><a href='https://getbootstrap.com'>Bootstrap</a><p>
+    <p><a href='https://sweetalert2.github.io/'>SweetAlert2</a><p>
+  </div>
+  </div>
+
 </div>
 <?php
 include_once('../../Vista/Common/Footer.php');

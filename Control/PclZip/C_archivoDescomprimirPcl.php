@@ -19,6 +19,7 @@ class C_archivoDescomprimidoPcl{
         move_uploaded_file($locacion, "./../../Descomprimidos/" . $archivo);
         $zip = new PclZip("./../../Descomprimidos/".$archivo);
         $resultado=false;
+        $error='';
         if($zip->extract('./../../Descomprimidos/zip/')) {
             $resultado=true;
         }else{

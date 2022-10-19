@@ -17,13 +17,15 @@ function data_submitted(){
     return $_AAux;
 }
 
-/* spl_autoload_register(function ($class_name){
+ spl_autoload_register(function ($class_name){
     //echo "class ".$class_name ;
-    $directorys = array(
-        $_SESSION['ROOT'].'Modelo/',
-        $_SESSION['ROOT'].'Modelo/conector/',
-        $_SESSION['ROOT'].'Control/',
-      //  $GLOBALS['ROOT'].'util/class/',
+    //include_once $class_name.'.php';
+     $directorys = array(
+        //$_SESSION['ROOT'].'Modelo/',
+        //$_SESSION['ROOT'].'Modelo/conector/',
+        $_SESSION['ROOT'].'Control/PclZip/',
+        $_SESSION['ROOT'].'Control/ZipArchive/',
+        //$GLOBALS['ROOT'].'util/class/',
     );
     //print_object($directorys) ;
     foreach($directorys as $directory){
@@ -33,7 +35,7 @@ function data_submitted(){
             return;
         }
     }
-}); */
+});
 
 function rmDirR($carpeta){
     foreach(glob($carpeta . "/*") as $archivos_carpeta){             

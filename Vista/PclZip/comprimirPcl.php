@@ -1,7 +1,6 @@
 <?php 
     include_once('../../Vista/Common/Header.php');
     include_once('../../Util/pclzip.lib.php');
-    include_once("../../Control/PclZip/C_archivoComprimidoPcl.php");
 
     $estructura='./../../Uploads';
     $objetoZip=new C_archivoComprimidoPcl;

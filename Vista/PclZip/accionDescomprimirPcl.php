@@ -1,6 +1,5 @@
 <?php
 include_once('../../Vista/Common/Header.php');
-include_once("../../Control/PclZip/C_archivoDescomprimirPcl.php");
 
 $objetoDescomprimir=new C_archivoDescomprimidoPcl;
 $resultados=$objetoDescomprimir->descomprimir($_FILES);
@@ -17,7 +16,7 @@ $resultados=$objetoDescomprimir->descomprimir($_FILES);
         echo "</div>";
         ?>
         <div class="mb-3 text-center">
-            <a href= "descomprimir.php" class="btn btn-outline-secondary">Volver</a>
+            <a href= "descomprimirPcl.php" class="btn btn-outline-secondary">Volver</a>
         </div>
 <?php
     }else{

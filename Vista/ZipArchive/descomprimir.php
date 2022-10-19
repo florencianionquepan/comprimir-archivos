@@ -6,5 +6,7 @@
                     <button class="btn btn-outline-secondary my-3" type="submit" id="descomprimir">DESCOMPRIMIR</button>
             </form>
         </div>
+
+        <script type='text/javascript' src='../Assets/js/descomprimir.js'></script>
     </div>
 <?php include_once('../../Vista/Common/Footer.php')?>

@@ -1,0 +1,1 @@
+const inputFile=document.querySelector('input');

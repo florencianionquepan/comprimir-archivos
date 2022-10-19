@@ -5,7 +5,8 @@ include_once("../../Control/ZipArchive/C_archivoDescomprimir.php");
 $objetoDescomprimir=new C_archivoDescomprimido;
 $carpetaGenerada=$objetoDescomprimir->generarCarpeta();
 if($carpetaGenerada){
-    if ($objetoDescomprimir->descomprimir($_FILES)){
+    $resultados=$objetoDescomprimir->descomprimir($_FILES);
+    if ($resultados[0]){
         $rutasArchivos=$objetoDescomprimir->obtenerArchivos($ruta='../../Descomprimidos', $lista=[]);
         //print_r($rutasArchivos);
         echo "<div class='row my-5 text-center justify-content-center align-items-center'>";
@@ -20,7 +21,14 @@ if($carpetaGenerada){
         <div class="mb-3 text-center">
             <a href= "descomprimir.php" class="btn btn-outline-secondary">Volver</a>
         </div>
-<?php
+    <?php
+    }else{
+        echo "<div class='row my-5 text-center justify-content-center align-items-center'>";
+        echo "<div class='col-12 col-md-8 col-lg-6 alert alert-danger' role='alert'>";
+        echo $resultados[1];
+        echo "</div>";
+        echo "</div>";
     }
 }
-include_once('../../Vista/Common/Footer.php')?>;
+include_once('../../Vista/Common/Footer.php')
+?>;

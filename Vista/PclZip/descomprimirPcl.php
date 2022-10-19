@@ -1,5 +1,4 @@
 <?php include_once('../../Vista/Common/Header.php');
-include_once("../../Control/PclZip/C_archivoDescomprimirPcl.php");
 
 $objetoDescomprimir=new C_archivoDescomprimidoPcl;
 $carpetaGenerada=$objetoDescomprimir->generarCarpeta();

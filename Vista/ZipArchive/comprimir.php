@@ -1,6 +1,5 @@
 <?php 
     include_once('../../Vista/Common/Header.php');
-    include_once("../../Control/ZipArchive/C_archivoComprimido.php");
 
     $estructura='./../../Uploads';
     $objetoZip=new C_archivoComprimido;

@@ -1,6 +1,5 @@
 <?php
 include_once('../../Vista/Common/Header.php');
-include_once("../../Control/ZipArchive/C_archivoDescomprimir.php");
 
 $objetoDescomprimir=new C_archivoDescomprimido;
 $carpetaGenerada=$objetoDescomprimir->generarCarpeta();

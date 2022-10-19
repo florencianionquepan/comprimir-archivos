@@ -31,16 +31,31 @@ class C_archivoDescomprimidoPcl{
         
         //le quita todos los espacios que tenga un nombre de un archivo
         $dir = "./../../Descomprimidos/zip/";
-        $gestor = opendir($dir);
-
-        while (($archivo = readdir($gestor)) !== false)  {
-            $sin = str_replace(' ', '', $archivo);
-            if ($archivo != "." && $archivo != ".."){
-                rename($dir.$archivo, $dir.$sin);
-            }}
+        $this->quitarEspacios($dir);
         
         $resultados=[$resultado,$error];
         return $resultados;
+        }
+
+        function quitarEspacios($dir){
+            $gestor = opendir($dir);
+    
+            while (($archivo = readdir($gestor)) !== false)  {
+                    
+                $ruta_completa = $dir . "/" . $archivo;
+    
+                if ($archivo != "." && $archivo != "..") {
+    
+                    $sin = str_replace(' ', '', $archivo);
+                    // Si es un directorio se recorre recursivamente
+                    if (is_dir($ruta_completa)) {
+                        $this->quitarEspacios($ruta_completa.'/');
+                    } else {
+                        rename($dir.$archivo, $dir.$sin);
+                    }
+                }
+            }
+            
         }
 
     

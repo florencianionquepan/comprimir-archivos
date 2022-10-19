@@ -1,4 +1,9 @@
-<?php include_once('../../Vista/Common/Header.php')?>
+<?php include_once('../../Vista/Common/Header.php');
+
+$objetoDescomprimir=new C_archivoDescomprimido;
+$carpetaGenerada=$objetoDescomprimir->generarCarpeta();
+
+?>
     <div class="container-md">
         <div class="row m-5 text-center justify-content-center align-items-center   ">
             <form method="post" action="accionDescomprimir.php" enctype="multipart/form-data" class="cuadro py-5 m-3 col-12 col-md-8 col-lg-6">

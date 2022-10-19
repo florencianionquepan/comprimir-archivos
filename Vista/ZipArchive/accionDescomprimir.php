@@ -2,9 +2,7 @@
 include_once('../../Vista/Common/Header.php');
 
 $objetoDescomprimir=new C_archivoDescomprimido;
-$carpetaGenerada=$objetoDescomprimir->generarCarpeta();
-if($carpetaGenerada){
-    $resultados=$objetoDescomprimir->descomprimir($_FILES);
+$resultados=$objetoDescomprimir->descomprimir($_FILES);
     if ($resultados[0]){
         $rutasArchivos=$objetoDescomprimir->obtenerArchivos($ruta='../../Descomprimidos', $lista=[]);
         //print_r($rutasArchivos);
@@ -28,6 +26,5 @@ if($carpetaGenerada){
         echo "</div>";
         echo "</div>";
     }
-}
 include_once('../../Vista/Common/Footer.php')
 ?>;

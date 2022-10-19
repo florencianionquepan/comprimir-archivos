@@ -14,7 +14,7 @@ inputFile.onchange=function(){
             method: 'POST',
             body:formData,
             })
-            .then(resp=>successMessage(resp.json()))
+            .then(resp=>successMessage(resp))
     }
     inputFile.value='';
 }
@@ -37,7 +37,7 @@ function verificarArchivos(){
 }
 
 function successMessage(resp){
-    console.log(resp);
+    //console.log(resp);
     Swal.fire({
         position: 'center',
         icon: 'success',
@@ -78,7 +78,7 @@ $(document).on('click', '.remove', function(event) {
     event.preventDefault();
 
     var fila = $(this).closest('tr');
-    console.log(fila);
+    //console.log(fila);
 
     var nombreArchivo = fila[0].firstChild.innerHTML;
 

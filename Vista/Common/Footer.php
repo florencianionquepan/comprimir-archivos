@@ -3,10 +3,11 @@
 
     
   <!-- Copyright -->
-    <div class="container">
+    <div class="container-fluid">
         <div class="footer-copyright text-center py-3 text-light" >Flor y Dari:)
         </div>
     </div>
+</footer>
 
     <script type='text/javascript' src='../../node_modules/bootstrap/dist/js/bootstrap.min.js'></script>
     <script type='text/javascript' src='../../node_modules/sweetalert2/dist/sweetalert2.min.js'></script>

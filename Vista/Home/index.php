@@ -12,7 +12,7 @@
 
   <div class="row align-items-center justify-content-center">
     <div class="col-10 text-center mb-3">
-      <h2 class='display'>Comprimir y descomprimir archivos Zip<h2>
+      <h2 class='display-4'>Comprimir y descomprimir archivos Zip<h2>
     </div>
   </div>
   <div class="row align-items-center text-center justify-content-center">
@@ -34,15 +34,37 @@
     </div>
   </div>
   <div class="row align-items-center justify-content-center">
-    <div class="col-10 col-md-6 col-lg-5">
-      One of three columns
-    </div>
-    <div class="col-10 col-md-6 col-lg-5">
-      One of three columns
+    <div class="col-10 text-center pt-3">
+      <h3>Metodos utilizados generar zip</h3>
     </div>
   </div>
   <div class="row align-items-center justify-content-center">
-  <div class="col-10 text-center my-3">
+    <div class="col-10 col-md-6 col-lg-5">
+    <a href='https://www.php.net/manual/es/ziparchive.open'>ZipArchive::open()</a><br>
+    <a href='https://www.php.net/manual/es/ziparchive.addfile'>ZipArchive::addFile()</a><br>
+    <a href='https://www.php.net/manual/es/ziparchive.addfile'>ZipArchive::close()</a><br>
+    </div>
+    <div class="col-10 col-md-6 col-lg-5">
+      
+    </div>
+  </div>
+  <div class="row align-items-center justify-content-center">
+    <div class="col-10 text-center pt-3">
+      <h3>Metodos utilizados descomprimir</h3>
+    </div>
+    <div class="row align-items-center justify-content-center">
+    <div class="col-10 col-md-6 col-lg-5">
+    ZipArchive::open()
+    ZipArchive::extractTo()
+    ZipArchive::close()
+    </div>
+    <div class="col-10 col-md-6 col-lg-5">
+      
+    </div>
+  </div>
+
+  <div class="row align-items-center justify-content-center">
+  <div class="col-10 text-center pt-3">
   <h3>Otras dependencias utilizadas</h3>
     <p><a href='https://getbootstrap.com'>Bootstrap</a><p>
     <p><a href='https://sweetalert2.github.io/'>SweetAlert2</a><p>

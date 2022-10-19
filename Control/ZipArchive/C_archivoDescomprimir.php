@@ -22,7 +22,7 @@ class C_archivoDescomprimido{
             $zip->extractTo('../../Descomprimidos');
 
             //le quita todos los espacios que tenga un nombre de un archivo
-            $dir = "./../../Descomprimidos";
+            $dir = "./../../Descomprimidos/";
             $this->quitarEspacios($dir);
 
             $zip->close();

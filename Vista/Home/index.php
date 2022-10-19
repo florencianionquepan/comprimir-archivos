@@ -3,18 +3,19 @@
 ?>
 
 <link rel="stylesheet" href="../Assets/css/estilo.css">
+<link href="http://fonts.cdnfonts.com/css/cascadia-code" rel="stylesheet">
 
-<div id="indexElement">  
-  <img class="img-fluid mt-5" id="imgIndex" src="../Assets/img/zip.png" alt="zip"/>
-</div>
+<div class="container-md mt-3">
 
-<div class="container-md mb-5 mt-5">
-
-  <div class="row align-items-center justify-content-center">
+<div class="row align-items-center justify-content-center">
     <div class="col-10 text-center mb-3">
       <h2 class='display-4'>Comprimir y descomprimir archivos Zip<h2>
     </div>
-  </div>
+</div>
+<div id="indexElement">  
+  <img class="img-fluid mb-3" id="imgIndex" src="../Assets/img/zip.png" alt="zip"/>
+</div>
+
   <div class="row align-items-center text-center justify-content-center">
     <div class="col-10 col-md-6 col-lg-5">
       <h1>ZipArchive<h1>
@@ -35,17 +36,19 @@
   </div>
   <div class="row align-items-center justify-content-center">
     <div class="col-10 text-center pt-3">
-      <h3>Metodos utilizados generar zip</h3>
+      <h3>Metodos utilizados generar zip (FALTAN AGREGAR LOS PARAMETROS)</h3>
     </div>
   </div>
   <div class="row align-items-center justify-content-center">
     <div class="col-10 col-md-6 col-lg-5">
-    <a href='https://www.php.net/manual/es/ziparchive.open'>ZipArchive::open()</a><br>
-    <a href='https://www.php.net/manual/es/ziparchive.addfile'>ZipArchive::addFile()</a><br>
-    <a href='https://www.php.net/manual/es/ziparchive.addfile'>ZipArchive::close()</a><br>
+    <a href='https://www.php.net/manual/es/ziparchive.open' class='cascadia-code'>ZipArchive::open()</a><br>
+    <a href='https://www.php.net/manual/es/ziparchive.addfile' class='cascadia-code'>ZipArchive::addFile()</a><br>
+    <a href='https://www.php.net/manual/es/ziparchive.close' class='cascadia-code'>ZipArchive::close()</a><br>
     </div>
     <div class="col-10 col-md-6 col-lg-5">
-      
+    <a href='https://www.php.net/manual/es/ziparchive.open' class='cascadia-code'>PclZip::add($file);</a><br>
+    <a href='https://www.php.net/manual/es/ziparchive.addfile' class='cascadia-code'>ZipArchive::addFile()</a><br>
+    <a href='https://www.php.net/manual/es/ziparchive.close' class='cascadia-code'>ZipArchive::close()</a><br>
     </div>
   </div>
   <div class="row align-items-center justify-content-center">
@@ -54,12 +57,12 @@
     </div>
     <div class="row align-items-center justify-content-center">
     <div class="col-10 col-md-6 col-lg-5">
-    ZipArchive::open()
-    ZipArchive::extractTo()
-    ZipArchive::close()
+    <a href='https://www.php.net/manual/es/ziparchive.open' class='cascadia-code'>ZipArchive::open()</a><br>
+    <a href='https://www.php.net/manual/en/ziparchive.extractto.php'>ZipArchive::extractTo()</a><br>
+    <a href='https://www.php.net/manual/es/ziparchive.close' class='cascadia-code'>ZipArchive::close()</a><br>
     </div>
     <div class="col-10 col-md-6 col-lg-5">
-      
+    <a href='https://wp-kama.com/function/PclZip::extract' class='cascadia-code'>PclZip::extract()</a><br>
     </div>
   </div>
 

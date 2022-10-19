@@ -18,7 +18,8 @@ class C_archivoDescomprimido{
         $zip = new ZipArchive();
         $resultado=false;
         //quiero que el archivo a descomprimir sea de solo lectura
-        if($zip->open($locacion, ZipArchive::RDONLY)===TRUE) {
+        $respuesta=$zip->open($locacion, ZipArchive::RDONLY);
+        if($respuesta===TRUE) {
             $zip->extractTo('../../Descomprimidos');
 
             //le quita todos los espacios que tenga un nombre de un archivo
@@ -27,10 +28,23 @@ class C_archivoDescomprimido{
 
             $zip->close();
             $resultado=true;
+            $mensaje='Ok';
         }else{
-            echo "no era archivo zip";
+            $errores = [
+                ZipArchive::ER_EXISTS  =>  "El fichero ya existe.",
+                ZipArchive::ER_INCONS  =>  "Archivo zip inconsistente.",
+                ZipArchive::ER_INVAL  =>  "Argumento no válido.",
+                ZipArchive::ER_MEMORY  =>  "Falló malloc.",
+                ZipArchive::ER_NOENT  =>  "No existe el fichero.",
+                ZipArchive::ER_NOZIP  =>  "No es un archivo zip.",
+                ZipArchive::ER_OPEN  =>  "No se puede abrir el fichero.",
+                ZipArchive::ER_READ  =>  "Error de lectura.",
+                ZipArchive::ER_SEEK  =>  "Error de búsqueda."
+            ];
+            $mensaje=$errores[$respuesta];
         }
-        return $resultado;
+        $resultados=[$resultado,$mensaje];
+        return $resultados;
     }
 
     function quitarEspacios($dir){

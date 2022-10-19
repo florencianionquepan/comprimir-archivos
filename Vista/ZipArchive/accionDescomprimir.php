@@ -17,6 +17,9 @@ if($carpetaGenerada){
         echo "</div>";
         echo "</div>";
         ?>
+        <div class="mb-3 text-center">
+            <a href= "descomprimir.php" class="btn btn-outline-secondary">Volver</a>
+        </div>
 <?php
     }
 }

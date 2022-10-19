@@ -16,7 +16,10 @@ class C_archivoDescomprimidoPcl{
     function descomprimir($zipUser){
         $locacion=$zipUser["zip"]["tmp_name"];
         $archivo=$zipUser["zip"]["name"];
+        
         move_uploaded_file($locacion, "./../../Descomprimidos/" . $archivo);
+        
+    
         $zip = new PclZip("./../../Descomprimidos/".$archivo);
         $resultado=false;
         $error='';
@@ -25,9 +28,22 @@ class C_archivoDescomprimidoPcl{
         }else{
             $error=$zip->errorInfo();
         }
+        
+        //le quita todos los espacios que tenga un nombre de un archivo
+        $dir = "./../../Descomprimidos/zip/";
+        $gestor = opendir($dir);
+
+        while (($archivo = readdir($gestor)) !== false)  {
+            $sin = str_replace(' ', '', $archivo);
+            if ($archivo != "." && $archivo != ".."){
+                rename($dir.$archivo, $dir.$sin);
+            }}
+        
         $resultados=[$resultado,$error];
         return $resultados;
     }
+
+    
 
     function obtenerArchivos($ruta, $lista){
         //Chequear que exista la carpeta Descomprimidos:

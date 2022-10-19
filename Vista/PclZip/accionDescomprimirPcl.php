@@ -21,7 +21,11 @@ $resultados=$objetoDescomprimir->descomprimir($_FILES);
         </div>
 <?php
     }else{
+        echo "<div class='row my-5 text-center justify-content-center align-items-center'>";
+        echo "<div class='col-12 col-md-8 col-lg-6 alert alert-danger' role='alert'>";
         echo $resultados[1];
+        echo "</div>";
+        echo "</div>";
     }
 
 include_once('../../Vista/Common/Footer.php')?>;

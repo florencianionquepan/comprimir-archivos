@@ -23,7 +23,8 @@ class C_archivoDescomprimidoPcl{
         if($zip->extract('./../../Descomprimidos/zip/')) {
             $resultado=true;
         }else{
-            $error=$zip->errorInfo();
+            //$error=$zip->errorInfo();
+            $error='ERROR '.$zip->errorInfo(true);
         }
         $resultados=[$resultado,$error];
         return $resultados;

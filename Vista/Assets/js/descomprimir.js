@@ -3,14 +3,18 @@ const inputFile=document.querySelector('input');
 inputFile.onchange=function(){
     var archivoZip = inputFile.value;
 
+    var button = document.getElementById('descomprimir');
+    button.disabled = false;
+
     if(!archivoZip.endsWith('.zip')){
         inputFile.value = '';
         errorMessage('Solo se admiten archivos tipo Zip'); 
-    
+        button.disabled = true;
     }else{
        if(!validarPeso()){
             errorMessage('El archivo es de mucho peso');
             inputFile.value = '';
+            button.disabled = true;
         } 
     }
    

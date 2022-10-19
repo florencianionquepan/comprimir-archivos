@@ -20,12 +20,38 @@ class C_archivoDescomprimido{
         //quiero que el archivo a descomprimir sea de solo lectura
         if($zip->open($locacion, ZipArchive::RDONLY)===TRUE) {
             $zip->extractTo('../../Descomprimidos');
+
+            //le quita todos los espacios que tenga un nombre de un archivo
+            $dir = "./../../Descomprimidos";
+            $this->quitarEspacios($dir);
+
             $zip->close();
             $resultado=true;
         }else{
             echo "no era archivo zip";
         }
         return $resultado;
+    }
+
+    function quitarEspacios($dir){
+        $gestor = opendir($dir);
+
+        while (($archivo = readdir($gestor)) !== false)  {
+                
+            $ruta_completa = $dir . "/" . $archivo;
+
+            if ($archivo != "." && $archivo != "..") {
+
+                $sin = str_replace(' ', '', $archivo);
+                // Si es un directorio se recorre recursivamente
+                if (is_dir($ruta_completa)) {
+                    $this->quitarEspacios($ruta_completa.'/');
+                } else {
+                    rename($dir.$archivo, $dir.$sin);
+                }
+            }
+        }
+        
     }
 
     function obtenerArchivos($ruta, $lista){

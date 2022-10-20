@@ -4,6 +4,7 @@ include_once('./../../Util/funciones.php');
 class C_archivoComprimido{
     function generarCarpeta($estructura){
         if (is_dir($estructura)){
+            //borra todos los archivos de la carpeta recursivamente
             rmDirR($estructura);
         }
         $generada=mkdir($estructura, 0700);

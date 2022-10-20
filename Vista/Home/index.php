@@ -33,7 +33,7 @@
     </div>
   </div>
 
-  <div class="row align-items-center border-top justify-content-center">
+  <div id="metodoCPcl" class="row align-items-center border-top justify-content-center">
     <div class="col-10 text-center pt-3">
       <h3>Métodos utilizados para generar zip</h3>
     </div>
@@ -47,7 +47,7 @@
     </div>
     <div class="col-10 col-md-6 col-lg-5">
     <a href='https://nullpoint3r.wordpress.com/2011/06/05/pclzip-trabajando-con-ficheros-comprimidos-en-php/' 
-    class='cascadia-code' name="metodoCPcl">PclZip::add($rutaArchivo)</a><br>
+    class='cascadia-code' >PclZip::add($rutaArchivo)</a><br>
     <img class="img-fluid mt-2" src="../Imagenes/comprimidoPclzip.png">
     </div>
   </div>
@@ -55,7 +55,7 @@
 
     
 
-  <div class="row align-items-center  border-top justify-content-center mt-3 ">
+  <div  id="metodoDPcl" class="row align-items-center  border-top justify-content-center mt-3 ">
     <div class="col-10 text-center pt-3 ">
       <h3>Métodos utilizados para descomprimir zip</h3>
     </div>
@@ -70,7 +70,7 @@
     </div>
     
     <div class="col-10 col-md-6 col-lg-5">
-    <a href='https://wp-kama.com/function/PclZip::extract' class='cascadia-code' name="metodoDPcl">PclZip::extract($ruta)</a><br>
+    <a href='https://wp-kama.com/function/PclZip::extract' class='cascadia-code'>PclZip::extract($ruta)</a><br>
     <img class="img-fluid mt-2" src="../Imagenes/descomprimirpclzip.png">
     </div>
   

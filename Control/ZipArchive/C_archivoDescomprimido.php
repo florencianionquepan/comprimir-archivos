@@ -10,7 +10,6 @@ class C_archivoDescomprimido{
         $generada=mkdir($estructura, 0700);
         return $generada;
     }
-    //verificar tambien que el archivo sea de tipo zip!!! y no se envie vacio!!
 
     function descomprimir($zipUser){
         $locacion=$zipUser["zip"]["tmp_name"];
@@ -34,7 +33,7 @@ class C_archivoDescomprimido{
                 ZipArchive::ER_EXISTS  =>  "El fichero ya existe.",
                 ZipArchive::ER_INCONS  =>  "Archivo zip inconsistente.",
                 ZipArchive::ER_INVAL  =>  "Argumento no válido.",
-                ZipArchive::ER_MEMORY  =>  "Falló malloc.",
+                ZipArchive::ER_MEMORY  =>  "Falló memoria.",
                 ZipArchive::ER_NOENT  =>  "No existe el fichero.",
                 ZipArchive::ER_NOZIP  =>  "No es un archivo zip.",
                 ZipArchive::ER_OPEN  =>  "No se puede abrir el fichero.",

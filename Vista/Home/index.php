@@ -17,12 +17,12 @@
 </div>
 
   <div class="row align-items-center justify-content-center border-top mt-5 instrucciones">
-    <div class="col-10 col-md-7 col-lg-5 m-2">
+    <div class="col-10 col-md-6 col-lg-5 my-2">
       <h1>ZipArchive</h1>
       <p>Clase nativa de php.<br>
       Es necesario tener habilitada la extensión ZIP en el servidor que ofrece el servicio de alojamiento.</p>
     </div>
-    <div class="col-10 col-md-6 col-lg-5 m-2">
+    <div class="col-10 col-md-6 col-lg-7 my-2">
       <h1>PclZip</h1>
       <p>Clase externa de php. <br>
       En ocasiones no tenemos acceso a la instalación y modificación de paquetes y configuración del servidor, 

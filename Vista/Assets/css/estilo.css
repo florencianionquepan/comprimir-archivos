@@ -14,4 +14,16 @@
     font-family: 'Cascadia Code', sans-serif; 
 }
 
+.instrucciones a{
+    text-decoration: none;
+    color:blueviolet;
+    transition: all 0.5s;
+}
+
+.instrucciones a:hover{
+    text-decoration: underline;
+    font-size:18px; 
+
+}
+
 

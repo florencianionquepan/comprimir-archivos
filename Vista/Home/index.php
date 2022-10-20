@@ -16,17 +16,20 @@
   <img class="img-fluid" id="imgIndex" src="../Assets/img/zip.png" alt="zip"/>
 </div>
 
-  <div class="row align-items-center justify-content-center border-top  mt-5">
-    <div class="col-10 col-md-7 col-lg-5 m-3">
+  <div class="row align-items-center justify-content-center border-top mt-5 instrucciones">
+    <div class="col-10 col-md-7 col-lg-5 m-2">
       <h1>ZipArchive</h1>
       <p>Clase nativa de php.<br>
       Es necesario tener habilitada la extensión ZIP en el servidor que ofrece el servicio de alojamiento.</p>
     </div>
-    <div class="col-10 col-md-6 col-lg-5 m-5">
+    <div class="col-10 col-md-6 col-lg-5 m-2">
       <h1>PclZip</h1>
       <p>Clase externa de php. <br>
-      En ocasiones no tenemos acceso a la instalación y modificación de paquetes y configuración del servidor, por lo que una buena opción es el uso de esta librería.</p>
-      
+      En ocasiones no tenemos acceso a la instalación y modificación de paquetes y configuración del servidor, 
+      por lo que una buena opción es el uso de esta librería.</p>
+      Ir a <a href="https://www.phpconcept.net/">Documentación Oficial</a><br>
+      Ir a <a href="https://github.com/chamilo/pclzip">Documentación No oficial</a>
+      <p> Software escrito por Vincent Blavet (vincent@phpconcept.net) </p>
     </div>
   </div>
 
@@ -79,18 +82,18 @@
       </div>
     </div>
       <div class="row align-items-center justify-content-center">
-        <div class="col-10">
+        <div class="col-10 instrucciones">
           <p>1. Descargar el siguiente script de PclZip: <a class="alert-link" download href='../../Util/pclzip.lib.php'>Libreria PclZip</a></p>      
           <p>2. Guardar la libreria en el proyecto a utilizar</p>
           <p>3. Incluir el script en los controladores de comprimir y descomprimir con <span class='cascadia-code'>include_once('[ruta]/pclzip.lib.php')</span></p> 
-          <p>4. Luego ejecutar las funciones necesarias de la librería para <a href='#metodoCPcl'>comprimir</a> o <a href='#metodoDPcl'>descomprimir</a></p>  
+          <p>4. Luego ejecutar las funciones necesarias de la librería para <a href='#metodoCPcl'>COMPRIMIR</a> o <a href='#metodoDPcl'>DESCOMPRIMIR</a></p>  
     </div>
   </div>
 
     
 
   <div class="row align-items-center justify-content-center border-top mt-3">
-  <div class="col-10 text-center pt-3">
+  <div class="col-10 text-center pt-3 instrucciones">
   <h3>Otras dependencias utilizadas</h3>
     <p><a href='https://getbootstrap.com'>Bootstrap<p>
     <img class="img-fluid" src="../Imagenes/bootstrap.svg.png"></a>

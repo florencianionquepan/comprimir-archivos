@@ -7,7 +7,7 @@ $files=$objetoZip->obtenerArchivos($folder, $lista=[]);
 $resultados=$objetoZip->generarComprimido($files,$folder);
 
 ?>
- <div class="container-md">
+ <div class="container">
     <div class="row m-5 text-center justify-content-center align-items-center">
         <?php if($resultados[0]){?>
             <div class="col-12 col-md-8 col-lg-6 col-xl-4 alert alert-secondary" role="alert">

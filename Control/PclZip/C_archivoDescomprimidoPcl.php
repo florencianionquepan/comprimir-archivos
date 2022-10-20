@@ -16,10 +16,7 @@ class C_archivoDescomprimidoPcl{
     function descomprimir($zipUser){
         $locacion=$zipUser["zip"]["tmp_name"];
         $archivo=$zipUser["zip"]["name"];
-        
         move_uploaded_file($locacion, "./../../Descomprimidos/" . $archivo);
-        
-    
         $zip = new PclZip("./../../Descomprimidos/".$archivo);
         $resultado=false;
         $error='';
@@ -59,7 +56,6 @@ class C_archivoDescomprimidoPcl{
             
         }
 
-    
 
     function obtenerArchivos($ruta, $lista){
         //Chequear que exista la carpeta Descomprimidos:

@@ -43,7 +43,8 @@
     <img class="img-fluid mt-2" src="../Imagenes/generarComprimido.png">
     </div>
     <div class="col-10 col-md-6 col-lg-5">
-    <a href='https://nullpoint3r.wordpress.com/2011/06/05/pclzip-trabajando-con-ficheros-comprimidos-en-php/' class='cascadia-code'>PclZip::add($rutaArchivo)</a><br>
+    <a href='https://nullpoint3r.wordpress.com/2011/06/05/pclzip-trabajando-con-ficheros-comprimidos-en-php/' 
+    class='cascadia-code' name="metodoCPcl">PclZip::add($rutaArchivo)</a><br>
     <img class="img-fluid mt-2" src="../Imagenes/comprimidoPclzip.png">
     </div>
   </div>
@@ -66,7 +67,7 @@
     </div>
     
     <div class="col-10 col-md-6 col-lg-5">
-    <a href='https://wp-kama.com/function/PclZip::extract' class='cascadia-code'>PclZip::extract($ruta)</a><br>
+    <a href='https://wp-kama.com/function/PclZip::extract' class='cascadia-code' name="metodoDPcl">PclZip::extract($ruta)</a><br>
     <img class="img-fluid mt-2" src="../Imagenes/descomprimirpclzip.png">
     </div>
   
@@ -79,10 +80,10 @@
     </div>
       <div class="row align-items-center justify-content-center">
         <div class="col-10">
-          <p>1. Descargar la siguiente librería de pclzip: <a class="alert-link" download href='../../Util/pclzip.lib.php'>Libreria PclZip</a></p>      
-          <p>2. Poner la libreria en la página en donde esten las funciones utiles</p>
-          <p>3. Incluir el archivo en los archivos de control de comprimir y descomprimir con <span class='cascadia-code'>include_once('[ruta]/pclzip.lib.php')</span></p> 
-          <p>4. Luego para realizar la función de la librería guiarse de los pasos que nosotras realizamos(me falta un ancla)</p>  
+          <p>1. Descargar el siguiente script de PclZip: <a class="alert-link" download href='../../Util/pclzip.lib.php'>Libreria PclZip</a></p>      
+          <p>2. Guardar la libreria en el proyecto a utilizar</p>
+          <p>3. Incluir el script en los controladores de comprimir y descomprimir con <span class='cascadia-code'>include_once('[ruta]/pclzip.lib.php')</span></p> 
+          <p>4. Luego ejecutar las funciones necesarias de la librería para <a href='#metodoCPcl'>comprimir</a> o <a href='#metodoDPcl'>descomprimir</a></p>  
     </div>
   </div>
 

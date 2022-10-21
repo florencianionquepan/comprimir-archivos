@@ -48,13 +48,9 @@ class C_archivoDescomprimido{
 
     function quitarEspacios($dir){
         $gestor = opendir($dir);
-
         while (($archivo = readdir($gestor)) !== false)  {
-                
             $ruta_completa = $dir . "/" . $archivo;
-
             if ($archivo != "." && $archivo != "..") {
-
                 $sin = str_replace(' ', '', $archivo);
                 // Si es un directorio se recorre recursivamente
                 if (is_dir($ruta_completa)) {

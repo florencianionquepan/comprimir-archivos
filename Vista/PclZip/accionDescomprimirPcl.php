@@ -25,6 +25,12 @@ $resultados=$objetoDescomprimir->descomprimir($_FILES);
         echo $resultados[1];
         echo "</div>";
         echo "</div>";
+        ?>
+        <div class="mb-3 text-center">
+            <a href= "descomprimirPcl.php" class="btn btn-outline-secondary">Volver</a>
+        </div>
+        <?php
+
     }
 
 include_once('../../Vista/Common/Footer.php')?>;

@@ -20,9 +20,9 @@ class C_archivoDescomprimidoPcl{
         $zip = new PclZip("./../../Descomprimidos/".$archivo);
         $resultado=false;
         $error='';
-        if($zip->extract('./../../Descomprimidos/zip/')) {
+        $dir = "./../../Descomprimidos/zip/";
+        if($zip->extract($dir)) {
             $resultado=true;
-            $dir = "./../../Descomprimidos/zip/";
             $this->quitarEspacios($dir);
         }else{
             //$error=$zip->errorInfo();

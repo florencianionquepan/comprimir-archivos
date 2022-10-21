@@ -22,15 +22,14 @@ class C_archivoDescomprimidoPcl{
         $error='';
         if($zip->extract('./../../Descomprimidos/zip/')) {
             $resultado=true;
+            $dir = "./../../Descomprimidos/zip/";
+            $this->quitarEspacios($dir);
         }else{
             //$error=$zip->errorInfo();
             $error='ERROR '.$zip->errorInfo(true);
         }
         
         //le quita todos los espacios que tenga un nombre de un archivo
-        $dir = "./../../Descomprimidos/zip/";
-        $this->quitarEspacios($dir);
-        
         $resultados=[$resultado,$error];
         return $resultados;
         }
